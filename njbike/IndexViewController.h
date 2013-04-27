@@ -21,7 +21,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *today;
 @property (strong, nonatomic) IBOutlet UILabel *weather;
 @property (strong, nonatomic) IBOutlet UILabel *temperature;
-@property (strong, nonatomic) IBOutlet MAMapView *map;
+@property (strong, nonatomic) MAMapView *map;
 
 - (IBAction)startRiding:(id)sender;
 - (IBAction)endRiding:(id)sender;
