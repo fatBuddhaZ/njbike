@@ -28,12 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _map.frame=self.view.bounds;
-        
+    _map = [[MAMapView alloc] initWithFrame:CGRectMake(10, 80, 300, 200)];
     
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
@@ -61,7 +60,7 @@
    // _map.mapType = MAMapTypeStandard;
    // _map.delegate = self;
     //CLLocationCoordinate2D currentLocation = {39.855539,116.419037};
-    _map.visibleMapRect = MAMapRectMake(220880104, 101476980, 272496, 466656);
+   // _map.visibleMapRect = MAMapRectMake(10,200,300,200);
    // MACoordinateSpan span = {0.04,0.03};
     //MACoordinateRegion region = {currentLocation,span};
     //[_map setRegion:region];
@@ -70,6 +69,7 @@
     [self initOverlay];
 
     [_map addOverlays:_overlays];
+    [self.view addSubview:_map];
 }
 #pragma mark - Initialization
 
