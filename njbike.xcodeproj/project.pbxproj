@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A83198F71726884E00775566 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A83198F41726884E00775566 /* AMap.bundle */; };
-		A83198F917268C6000775566 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83198F817268C6000775566 /* MapKit.framework */; };
 		A83198FB1726902800775566 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A83198FA1726902800775566 /* libxml2.2.dylib */; };
 		A8388BCF1724D31600CA1321 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8388BCE1724D31600CA1321 /* UIKit.framework */; };
 		A8388BD11724D31600CA1321 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8388BD01724D31600CA1321 /* Foundation.framework */; };
@@ -62,7 +61,6 @@
 		A83198ED1726884E00775566 /* MATypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATypes.h; sourceTree = "<group>"; };
 		A83198EE1726884E00775566 /* MAUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAUserLocation.h; sourceTree = "<group>"; };
 		A83198F41726884E00775566 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
-		A83198F817268C6000775566 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A83198FA1726902800775566 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		A8388BCB1724D31600CA1321 /* njbike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = njbike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8388BCE1724D31600CA1321 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -112,7 +110,6 @@
 			files = (
 				A8BA6EBC17293553009688E3 /* libsqlite3.dylib in Frameworks */,
 				A83198FB1726902800775566 /* libxml2.2.dylib in Frameworks */,
-				A83198F917268C6000775566 /* MapKit.framework in Frameworks */,
 				A8388BFB1725174F00CA1321 /* CoreText.framework in Frameworks */,
 				A8388C031725178F00CA1321 /* libstdc++.6.0.9.dylib in Frameworks */,
 				A8388C011725177F00CA1321 /* libz.dylib in Frameworks */,
@@ -130,6 +127,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C596584172CC0C400E2453C /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				A8BA6EA9172934F2009688E3 /* fmdb */,
+				A83198D91726884E00775566 /* 2D */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
 		A83198D91726884E00775566 /* 2D */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,12 +201,8 @@
 		A8388BC21724D31600CA1321 = {
 			isa = PBXGroup;
 			children = (
-				A8BA6EBB17293553009688E3 /* libsqlite3.dylib */,
-				A8BA6EA9172934F2009688E3 /* fmdb */,
-				A83198FA1726902800775566 /* libxml2.2.dylib */,
-				A83198F817268C6000775566 /* MapKit.framework */,
-				A83198D91726884E00775566 /* 2D */,
 				A8388BD41724D31600CA1321 /* njbike */,
+				3C596584172CC0C400E2453C /* Libs */,
 				A8388BCD1724D31600CA1321 /* Frameworks */,
 				A8388BCC1724D31600CA1321 /* Products */,
 			);
@@ -217,6 +219,14 @@
 		A8388BCD1724D31600CA1321 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8388BFE1725176C00CA1321 /* SystemConfiguration.framework */,
+				A8388BFC1725175A00CA1321 /* CoreLocation.framework */,
+				A8388BFA1725174F00CA1321 /* CoreText.framework */,
+				A8388BF61724E7B100CA1321 /* QuartzCore.framework */,
+				A8388C021725178F00CA1321 /* libstdc++.6.0.9.dylib */,
+				A8388C001725177F00CA1321 /* libz.dylib */,
+				A8BA6EBB17293553009688E3 /* libsqlite3.dylib */,
+				A83198FA1726902800775566 /* libxml2.2.dylib */,
 				A8388BCE1724D31600CA1321 /* UIKit.framework */,
 				A8388BD01724D31600CA1321 /* Foundation.framework */,
 				A8388BD21724D31600CA1321 /* CoreGraphics.framework */,
@@ -230,11 +240,11 @@
 				A8388BDD1724D31600CA1321 /* AppDelegate.h */,
 				A8388BDE1724D31600CA1321 /* AppDelegate.m */,
 				A8388BE61724D31600CA1321 /* MainStoryboard.storyboard */,
-				A8388BD51724D31600CA1321 /* Supporting Files */,
 				A8388BF11724D50100CA1321 /* IndexViewController.h */,
 				A8388BF21724D50100CA1321 /* IndexViewController.mm */,
 				A8AD31471727C0AD00FB8F09 /* RecordViewController.h */,
 				A8AD31481727C0AD00FB8F09 /* RecordViewController.m */,
+				A8388BD51724D31600CA1321 /* Supporting Files */,
 			);
 			path = njbike;
 			sourceTree = "<group>";
@@ -242,12 +252,6 @@
 		A8388BD51724D31600CA1321 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A8388C021725178F00CA1321 /* libstdc++.6.0.9.dylib */,
-				A8388C001725177F00CA1321 /* libz.dylib */,
-				A8388BFE1725176C00CA1321 /* SystemConfiguration.framework */,
-				A8388BFC1725175A00CA1321 /* CoreLocation.framework */,
-				A8388BFA1725174F00CA1321 /* CoreText.framework */,
-				A8388BF61724E7B100CA1321 /* QuartzCore.framework */,
 				A8388BF81724F03E00CA1321 /* setting.png */,
 				A8388BF41724D98800CA1321 /* ico.png */,
 				A8388BD61724D31600CA1321 /* njbike-Info.plist */,

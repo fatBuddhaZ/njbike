@@ -28,16 +28,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-<<<<<<< HEAD
-    _map = [[MAMapView alloc] initWithFrame:CGRectMake(10, 80, 300, 200)];
-=======
     _map = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, 300, 150)];
     _map.delegate = self;
     //地图
     _map.showsUserLocation = YES;
     [_myMapView addSubview:_map];
     
->>>>>>> 修改缩放值
     
 }
 
@@ -62,29 +58,7 @@
     _today.text = [weatherXml objectForKey:@"date_y"];
     _weather.text=[weatherXml objectForKey:@"weather1"];
     _temperature.text=[weatherXml objectForKey:@"temp1"];
-<<<<<<< HEAD
-     _map.delegate = self;
-    //地图
-   // _map.showsUserLocation = YES;
-   // _map.userTrackingMode  = MAUserTrackingModeFollow;
-   // _map.mapType = MAMapTypeStandard;
-   // _map.delegate = self;
-    //CLLocationCoordinate2D currentLocation = {39.855539,116.419037};
-   // _map.visibleMapRect = MAMapRectMake(10,200,300,200);
-   // MACoordinateSpan span = {0.04,0.03};
-    //MACoordinateRegion region = {currentLocation,span};
-    //[_map setRegion:region];
-    
-    //画线
-    [self initOverlay];
 
-    [_map addOverlays:_overlays];
-    [self.view addSubview:_map];
-=======
-    
-    
-    
->>>>>>> 修改缩放值
 }
 #pragma mark - Initialization
 
@@ -137,8 +111,9 @@
    // span.longitudeDelta=0.2;
     //MACoordinateRegion rrr = MACoordinateRegionMake(location, span);
    // [mapView setRegion:rrr animated:NO];
-    [mapView setCenterCoordinate:location];
-    [mapView setRegion:MACoordinateSpanMake(0.3,0.2)];
+    mapView.centerCoordinate = location;
+    mapView.region =  MACoordinateRegionMake(location,
+                                             MACoordinateSpanMake(0.3, 0.2));
     //[mapView setShowsUserLocation:YES];
 }
 
