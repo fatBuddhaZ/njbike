@@ -146,7 +146,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6c-q7-uHN">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="1Qb-Sn-zlM"/>
+                                    <constraint firstAttribute="width" constant="37" id="ZtZ-1C-iYE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="1" green="0.52339633689999998" blue="0.18257059959999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -177,8 +177,13 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLL-Cx-hPZ">
                                 <color key="backgroundColor" red="0.2604472150426983" green="0.90884001358695654" blue="0.11402191248986436" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+<<<<<<< HEAD
                                     <constraint firstAttribute="width" constant="306" id="0I9-EU-0V7"/>
                                     <constraint firstAttribute="height" constant="44" id="fpV-KP-hQr"/>
+=======
+                                    <constraint firstAttribute="height" constant="44" id="Y4b-dv-hQD"/>
+                                    <constraint firstAttribute="width" constant="306" id="iCT-Hy-Fq7"/>
+>>>>>>> 修改缩放值
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,12 +198,19 @@
                                     <action selector="endRiding:" destination="Diq-aA-WHS" eventType="touchUpInside" id="vQD-k6-qTK"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
+=======
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbT-2P-Ek8">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+>>>>>>> 修改缩放值
                         </subviews>
                         <color key="backgroundColor" red="0.94522758152173914" green="0.94522758152173914" blue="0.94522758152173914" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="oWU-9W-haP" secondAttribute="bottom" constant="118" id="4Cg-CL-NTk"/>
                             <constraint firstItem="nFN-8K-6in" firstAttribute="centerX" secondItem="oWU-9W-haP" secondAttribute="centerX" type="default" id="4Zn-im-9C2"/>
                             <constraint firstAttribute="bottom" secondItem="sSF-g4-Agj" secondAttribute="bottom" constant="54" id="59I-jl-YT4"/>
+                            <constraint firstItem="MbS-dB-aVc" firstAttribute="leading" secondItem="PgD-Pk-UUx" secondAttribute="leading" type="default" id="6aS-s3-Vtk"/>
                             <constraint firstItem="y2a-1V-syw" firstAttribute="top" secondItem="fmw-ik-bjO" secondAttribute="top" type="default" id="6an-8A-GEv"/>
                             <constraint firstItem="d6c-q7-uHN" firstAttribute="top" secondItem="y2a-1V-syw" secondAttribute="top" type="default" id="BX4-hM-5ed"/>
                             <constraint firstItem="YxR-H7-Dhg" firstAttribute="top" secondItem="DBl-TJ-qQD" secondAttribute="top" type="default" id="CYh-nZ-8lH"/>
@@ -210,25 +222,40 @@
                             <constraint firstItem="y2a-1V-syw" firstAttribute="baseline" secondItem="fmw-ik-bjO" secondAttribute="baseline" type="default" id="IVx-QC-AHt"/>
                             <constraint firstItem="ekR-Tt-G9i" firstAttribute="leading" secondItem="d6c-q7-uHN" secondAttribute="leading" type="default" id="Iif-JH-g9N"/>
                             <constraint firstItem="iEq-Hx-I4i" firstAttribute="trailing" secondItem="X6b-yb-Bef" secondAttribute="trailing" type="default" id="Iyt-lL-GGD"/>
-                            <constraint firstItem="YxR-H7-Dhg" firstAttribute="centerX" secondItem="Ztn-kE-YZM" secondAttribute="centerX" type="default" id="J7j-Mf-KT5"/>
                             <constraint firstItem="oWU-9W-haP" firstAttribute="centerX" secondItem="ekR-Tt-G9i" secondAttribute="centerX" type="default" id="KUn-vE-ZmR"/>
                             <constraint firstItem="X6b-yb-Bef" firstAttribute="leading" secondItem="ijD-eJ-WKv" secondAttribute="leading" type="default" id="MCu-CY-yJd"/>
                             <constraint firstItem="VLL-Cx-hPZ" firstAttribute="leading" secondItem="MbS-dB-aVc" secondAttribute="leading" type="default" id="MYb-Cd-7VA"/>
                             <constraint firstItem="DBl-TJ-qQD" firstAttribute="baseline" secondItem="wr9-Bv-sEF" secondAttribute="baseline" type="default" id="OF4-xH-Phd"/>
+<<<<<<< HEAD
+=======
+                            <constraint firstAttribute="bottom" secondItem="oWU-9W-haP" secondAttribute="bottom" constant="118" id="OJS-8h-8wg"/>
+                            <constraint firstAttribute="bottom" secondItem="VLL-Cx-hPZ" secondAttribute="bottom" constant="6" id="OvC-yK-snx"/>
+>>>>>>> 修改缩放值
                             <constraint firstItem="fmw-ik-bjO" firstAttribute="baseline" secondItem="sSF-g4-Agj" secondAttribute="baseline" type="default" id="Q7x-dW-vFg"/>
+                            <constraint firstAttribute="bottom" secondItem="ZbT-2P-Ek8" secondAttribute="bottom" constant="244" id="SFh-Dg-bpa"/>
                             <constraint firstItem="DBl-TJ-qQD" firstAttribute="top" secondItem="wr9-Bv-sEF" secondAttribute="top" type="default" id="T5C-Hp-Na7"/>
                             <constraint firstItem="D2f-fn-f2q" firstAttribute="centerY" secondItem="rAh-ws-gZL" secondAttribute="centerY" type="default" id="TJ5-fK-VFY"/>
                             <constraint firstItem="VLL-Cx-hPZ" firstAttribute="top" secondItem="MbS-dB-aVc" secondAttribute="top" type="default" id="UPc-db-AJa"/>
                             <constraint firstAttribute="bottom" secondItem="ndz-xv-zvU" secondAttribute="bottom" constant="94" id="UYI-cO-dQ2"/>
                             <constraint firstItem="MbS-dB-aVc" firstAttribute="trailing" secondItem="VLL-Cx-hPZ" secondAttribute="trailing" type="default" id="V9v-P7-Luk"/>
                             <constraint firstItem="fmw-ik-bjO" firstAttribute="top" secondItem="sSF-g4-Agj" secondAttribute="top" type="default" id="Wi2-vm-fMb"/>
+<<<<<<< HEAD
+=======
+                            <constraint firstItem="ZbT-2P-Ek8" firstAttribute="leading" secondItem="Ztn-kE-YZM" secondAttribute="leading" constant="11" id="WqK-uX-mS3"/>
+>>>>>>> 修改缩放值
                             <constraint firstItem="d6c-q7-uHN" firstAttribute="centerX" secondItem="YxR-H7-Dhg" secondAttribute="centerX" type="default" id="YcV-0Q-cTB"/>
                             <constraint firstItem="PgD-Pk-UUx" firstAttribute="top" secondItem="D2f-fn-f2q" secondAttribute="top" type="default" id="Yhc-HV-VKr"/>
                             <constraint firstItem="VLL-Cx-hPZ" firstAttribute="bottom" secondItem="MbS-dB-aVc" secondAttribute="bottom" type="default" id="bEv-6N-Gdc"/>
                             <constraint firstItem="PgD-Pk-UUx" firstAttribute="top" secondItem="Ztn-kE-YZM" secondAttribute="top" constant="6" id="cwf-E4-A4I"/>
+<<<<<<< HEAD
                             <constraint firstItem="VLL-Cx-hPZ" firstAttribute="leading" secondItem="PgD-Pk-UUx" secondAttribute="leading" type="default" id="geh-az-xPI"/>
+=======
+                            <constraint firstItem="ZbT-2P-Ek8" firstAttribute="top" secondItem="PgD-Pk-UUx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fEk-gf-v9t"/>
+                            <constraint firstItem="ndz-xv-zvU" firstAttribute="leading" secondItem="Ztn-kE-YZM" secondAttribute="leading" constant="13" id="gBe-w3-bW6"/>
+>>>>>>> 修改缩放值
                             <constraint firstItem="D2f-fn-f2q" firstAttribute="leading" secondItem="lHV-d4-GSP" secondAttribute="leading" type="default" id="gpS-k6-yEX"/>
                             <constraint firstItem="iEq-Hx-I4i" firstAttribute="leading" secondItem="ijD-eJ-WKv" secondAttribute="leading" type="default" id="jbT-SW-Y03"/>
+                            <constraint firstItem="YxR-H7-Dhg" firstAttribute="centerX" secondItem="ZbT-2P-Ek8" secondAttribute="centerX" type="default" id="k50-Aa-tnX"/>
                             <constraint firstItem="wr9-Bv-sEF" firstAttribute="leading" secondItem="Ztn-kE-YZM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kac-oQ-EEf"/>
                             <constraint firstItem="PEG-kX-c46" firstAttribute="baseline" secondItem="lHV-d4-GSP" secondAttribute="baseline" type="default" id="kl1-cB-HCU"/>
                             <constraint firstItem="ekR-Tt-G9i" firstAttribute="trailing" secondItem="lHV-d4-GSP" secondAttribute="trailing" type="default" id="l8o-d4-sI7"/>
@@ -238,15 +265,14 @@
                             <constraint firstItem="d6c-q7-uHN" firstAttribute="baseline" secondItem="y2a-1V-syw" secondAttribute="baseline" type="default" id="rKm-AR-Yhd"/>
                             <constraint firstItem="X6b-yb-Bef" firstAttribute="baseline" secondItem="ekR-Tt-G9i" secondAttribute="baseline" type="default" id="rSN-z8-RBL"/>
                             <constraint firstAttribute="bottom" secondItem="iEq-Hx-I4i" secondAttribute="bottom" constant="108" id="rbD-sR-cvi"/>
-                            <constraint firstItem="ndz-xv-zvU" firstAttribute="leading" secondItem="Ztn-kE-YZM" secondAttribute="leading" constant="13" id="sI1-dy-Dhc"/>
                             <constraint firstItem="PgD-Pk-UUx" firstAttribute="leading" secondItem="Ztn-kE-YZM" secondAttribute="leading" constant="8" id="sJL-IH-kdS"/>
                             <constraint firstItem="nFN-8K-6in" firstAttribute="top" secondItem="YxR-H7-Dhg" secondAttribute="top" type="default" id="tLO-AN-3eb"/>
                             <constraint firstItem="PEG-kX-c46" firstAttribute="trailing" secondItem="rAh-ws-gZL" secondAttribute="trailing" type="default" id="tOm-nx-RTZ"/>
                             <constraint firstItem="fmw-ik-bjO" firstAttribute="trailing" secondItem="DBl-TJ-qQD" secondAttribute="trailing" type="default" id="uVA-4G-aJp"/>
-                            <constraint firstAttribute="bottom" secondItem="MbS-dB-aVc" secondAttribute="bottom" constant="6" id="vS3-8j-3Oy"/>
                             <constraint firstItem="oWU-9W-haP" firstAttribute="top" secondItem="ekR-Tt-G9i" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vis-UM-Szs"/>
                             <constraint firstItem="nFN-8K-6in" firstAttribute="baseline" secondItem="YxR-H7-Dhg" secondAttribute="baseline" type="default" id="xDM-wq-2kt"/>
                             <constraint firstItem="DBl-TJ-qQD" firstAttribute="baseline" secondItem="YxR-H7-Dhg" secondAttribute="baseline" type="default" id="xJM-Uj-xBN"/>
+                            <constraint firstItem="ZbT-2P-Ek8" firstAttribute="centerX" secondItem="Ztn-kE-YZM" secondAttribute="centerX" type="default" id="yyX-QY-9HZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="南京骑行" id="VkI-XQ-exQ">
@@ -274,6 +300,10 @@
                         <outlet property="endBtu" destination="VLL-Cx-hPZ" id="uau-27-hX8"/>
                         <outlet property="endTime" destination="ndz-xv-zvU" id="LdN-6r-6Pt"/>
                         <outlet property="ico" destination="PgD-Pk-UUx" id="iWb-tD-iBj"/>
+<<<<<<< HEAD
+=======
+                        <outlet property="myMapView" destination="ZbT-2P-Ek8" id="VQf-Tv-rtS"/>
+>>>>>>> 修改缩放值
                         <outlet property="stratTime" destination="ijD-eJ-WKv" id="ndl-G4-q9g"/>
                         <outlet property="temperature" destination="PEG-kX-c46" id="ATa-Vn-ayr"/>
                         <outlet property="today" destination="rAh-ws-gZL" id="8zV-vv-Xlm"/>
@@ -344,15 +374,12 @@
                 <relationship kind="outlet" name="endBtu" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="endTime" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="ico" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="map" candidateClass="MAMapView"/>
+                <relationship kind="outlet" name="myMapView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="stratTime" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="temperature" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="today" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="weather" candidateClass="UILabel"/>
             </relationships>
-        </class>
-        <class className="MAMapView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MAMapView.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

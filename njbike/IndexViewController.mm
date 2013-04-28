@@ -13,7 +13,7 @@
 @end
 
 @implementation IndexViewController
-@synthesize ico = _ico,today=_today,weather=_weather,temperature=_temperature,map=_map,stratTime=_stratTime,endBtu=_endBtu,endTime=_endTime,overlays = _overlays;
+@synthesize ico = _ico,today=_today,weather=_weather,temperature=_temperature,myMapView=_myMapView,stratTime=_stratTime,endBtu=_endBtu,endTime=_endTime,overlays = _overlays;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -28,14 +28,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+<<<<<<< HEAD
     _map = [[MAMapView alloc] initWithFrame:CGRectMake(10, 80, 300, 200)];
+=======
+    _map = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, 300, 150)];
+    _map.delegate = self;
+    //地图
+    _map.showsUserLocation = YES;
+    [_myMapView addSubview:_map];
+    
+>>>>>>> 修改缩放值
     
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
+    //设置logo
     CALayer * layer = [_ico layer];
     layer.borderColor = [
                          [UIColor whiteColor] CGColor];
@@ -53,6 +62,7 @@
     _today.text = [weatherXml objectForKey:@"date_y"];
     _weather.text=[weatherXml objectForKey:@"weather1"];
     _temperature.text=[weatherXml objectForKey:@"temp1"];
+<<<<<<< HEAD
      _map.delegate = self;
     //地图
    // _map.showsUserLocation = YES;
@@ -70,18 +80,22 @@
 
     [_map addOverlays:_overlays];
     [self.view addSubview:_map];
+=======
+    
+    
+    
+>>>>>>> 修改缩放值
 }
 #pragma mark - Initialization
 
-- (void)initOverlay
+- (void)initOverlay:(CLLocationCoordinate2D)coordinate
 {
     _overlays = [NSMutableArray array];
     CLLocationCoordinate2D polylineCoords[2];
-    polylineCoords[0].latitude = 39.855539;
-    polylineCoords[0].longitude = 116.419037;
+    polylineCoords[0]=coordinate;
     
-    polylineCoords[1].latitude = 39.858172;
-    polylineCoords[1].longitude = 116.520285;
+    polylineCoords[1].latitude = coordinate.latitude+0.01;
+    polylineCoords[1].longitude = coordinate.longitude+0.01;
     MAPolyline *polyline = [MAPolyline polylineWithCoordinates:polylineCoords count:2];
     [_overlays insertObject:polyline atIndex:0];
 }
@@ -92,7 +106,7 @@
     {
         MAPolylineView *polylineView = [[MAPolylineView alloc] initWithPolyline:overlay];
         
-        polylineView.lineWidth   = 8.f;
+        polylineView.lineWidth   = 2.f;
         polylineView.strokeColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:1];
         
         return polylineView;
@@ -102,13 +116,30 @@
 
 - (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
 {
-    if (userLocation != nil) {
-        CLLocationCoordinate2D currentLocation = {userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude};
+    CLLocationCoordinate2D location=userLocation.location.coordinate;
+   /* if (userLocation != nil) {
         
-        MACoordinateSpan span = {0.04,0.03};
+        CLLocationCoordinate2D currentLocation = {userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude};
+        //画线
+        [self initOverlay:currentLocation];
+        
+        MACoordinateSpan span = {0.05,0.05};
         MACoordinateRegion region = {currentLocation,span};
         [mapView setRegion:region];
-    }
+        [_map addOverlays:_overlays];
+    */
+    //CLLocationCoordinate2D location=userLocation.location.coordinate;
+    
+
+   // MACoordinateSpan span = [mapView coordinateSpanWithMapView:mapView centerCoordinate:userLocation andZoomLevel:18];
+    
+  //  span.latitudeDelta=0.3;
+   // span.longitudeDelta=0.2;
+    //MACoordinateRegion rrr = MACoordinateRegionMake(location, span);
+   // [mapView setRegion:rrr animated:NO];
+    [mapView setCenterCoordinate:location];
+    [mapView setRegion:MACoordinateSpanMake(0.3,0.2)];
+    //[mapView setShowsUserLocation:YES];
 }
 
 
@@ -166,17 +197,5 @@
     return dictionaryWeatherInfo;
 }
 
-#pragma mark - Life Cycle
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        [self initOverlay];
-    }
-    
-    return self;
-}
 
 @end
