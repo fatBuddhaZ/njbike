@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <QuartzCore/QuartzCore.h>
-#import "MAMapKit.h"
 
 @interface IndexViewController : UIViewController<MAMapViewDelegate>
 {
@@ -22,12 +21,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *today;
 @property (strong, nonatomic) IBOutlet UILabel *weather;
 @property (strong, nonatomic) IBOutlet UILabel *temperature;
-<<<<<<< HEAD
-@property (strong, nonatomic) MAMapView *map;
 
-=======
 @property (strong, nonatomic) IBOutlet UIView *myMapView;
->>>>>>> 修改缩放值
 - (IBAction)startRiding:(id)sender;
 - (IBAction)endRiding:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *stratTime;
