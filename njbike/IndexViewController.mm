@@ -7,9 +7,15 @@
 //
 
 #import "IndexViewController.h"
+#import "MAGeometry.h"
 
 
 @interface IndexViewController ()
+{
+   NSMutableArray *mapaintArray;
+}
+    
+
 @end
 
 @implementation IndexViewController
@@ -28,29 +34,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _map = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, 300, 150)];
-    _map.delegate = self;
     //地图
+    _map = [[MAMapView alloc] initWithFrame:CGRectMake(2, 2, 294, 148)];
+    _map.mapType = MAMapTypeStandard;
     _map.showsUserLocation = YES;
-    [_myMapView addSubview:_map];
+    _map.delegate = self;
+    mapaintArray = [NSMutableArray array];
     
     
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    //设置logo
+    //设置logo边框
     CALayer * layer = [_ico layer];
     layer.borderColor = [
                          [UIColor whiteColor] CGColor];
     layer.borderWidth = 2.0f;
     [layer setCornerRadius:10.0];
-    UIImage *img = [UIImage imageNamed:@"ico.png"];
-    
     _ico.contentMode=UIViewContentModeScaleAspectFit;
     _ico.clipsToBounds = YES;
-    [_ico setImage:img];
     
     //天气
     NSDictionary* weatherXml = [IndexViewController getWeatherXmlForZipCode:@"101190101"];
@@ -58,20 +57,43 @@
     _today.text = [weatherXml objectForKey:@"date_y"];
     _weather.text=[weatherXml objectForKey:@"weather1"];
     _temperature.text=[weatherXml objectForKey:@"temp1"];
+    
+    
+    
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [_myMapView addSubview:_map];
+    [_ico setImage:[UIImage imageNamed:@"ico.png"]];
+    
+   
 
 }
+
+
 #pragma mark - Initialization
 
 - (void)initOverlay:(CLLocationCoordinate2D)coordinate
 {
     _overlays = [NSMutableArray array];
-    CLLocationCoordinate2D polylineCoords[2];
+    
+    
+   // CGPoint point = [_map convertCoordinate:coordinate toPointToView:_myMapView];
+    
+    
+  /*  CLLocationCoordinate2D polylineCoords[2];
     polylineCoords[0]=coordinate;
     
+    
+    
     polylineCoords[1].latitude = coordinate.latitude+0.01;
-    polylineCoords[1].longitude = coordinate.longitude+0.01;
-    MAPolyline *polyline = [MAPolyline polylineWithCoordinates:polylineCoords count:2];
+    polylineCoords[1].longitude = coordinate.longitude-0.01;
+    MAPolyline *polyline = [MAPolyline polylineWithCoordinates:polylineCoords count:1];
     [_overlays insertObject:polyline atIndex:0];
+   */
 }
 #pragma mark - MAMapViewDelegate
 - (MAOverlayView *)mapView:(MAMapView *)mapView viewForOverlay:(id <MAOverlay>)overlay
@@ -90,31 +112,16 @@
 
 - (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
 {
+   
     CLLocationCoordinate2D location=userLocation.location.coordinate;
-   /* if (userLocation != nil) {
-        
-        CLLocationCoordinate2D currentLocation = {userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude};
-        //画线
-        [self initOverlay:currentLocation];
-        
-        MACoordinateSpan span = {0.05,0.05};
-        MACoordinateRegion region = {currentLocation,span};
-        [mapView setRegion:region];
-        [_map addOverlays:_overlays];
-    */
-    //CLLocationCoordinate2D location=userLocation.location.coordinate;
-    
-
-   // MACoordinateSpan span = [mapView coordinateSpanWithMapView:mapView centerCoordinate:userLocation andZoomLevel:18];
-    
-  //  span.latitudeDelta=0.3;
-   // span.longitudeDelta=0.2;
-    //MACoordinateRegion rrr = MACoordinateRegionMake(location, span);
-   // [mapView setRegion:rrr animated:NO];
-    mapView.centerCoordinate = location;
     mapView.region =  MACoordinateRegionMake(location,
-                                             MACoordinateSpanMake(0.3, 0.2));
-    //[mapView setShowsUserLocation:YES];
+                                            MACoordinateSpanMake(0.04, 0.06));
+   
+    
+   MAMapPoint centerMapPoint = MAMapPointForCoordinate(location);
+     
+    //[mapaintArray addObject:point];
+    mapView.showsUserLocation=NO;
 }
 
 

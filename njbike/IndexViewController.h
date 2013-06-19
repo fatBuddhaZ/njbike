@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <QuartzCore/QuartzCore.h>
 
+
 @interface IndexViewController : UIViewController<MAMapViewDelegate>
 {
     CLLocationManager *locationManager;

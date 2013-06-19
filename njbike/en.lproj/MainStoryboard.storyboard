@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dtG-lu-pzp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dtG-lu-pzp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -199,7 +199,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94522758152173914" green="0.94522758152173914" blue="0.94522758152173914" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="oWU-9W-haP" secondAttribute="bottom" constant="118" id="4Cg-CL-NTk"/>
                             <constraint firstItem="nFN-8K-6in" firstAttribute="centerX" secondItem="oWU-9W-haP" secondAttribute="centerX" type="default" id="4Zn-im-9C2"/>
                             <constraint firstAttribute="bottom" secondItem="sSF-g4-Agj" secondAttribute="bottom" constant="54" id="59I-jl-YT4"/>
                             <constraint firstItem="MbS-dB-aVc" firstAttribute="leading" secondItem="PgD-Pk-UUx" secondAttribute="leading" type="default" id="6aS-s3-Vtk"/>
@@ -221,7 +220,6 @@
                             <constraint firstAttribute="bottom" secondItem="oWU-9W-haP" secondAttribute="bottom" constant="118" id="OJS-8h-8wg"/>
                             <constraint firstAttribute="bottom" secondItem="VLL-Cx-hPZ" secondAttribute="bottom" constant="6" id="OvC-yK-snx"/>
                             <constraint firstItem="fmw-ik-bjO" firstAttribute="baseline" secondItem="sSF-g4-Agj" secondAttribute="baseline" type="default" id="Q7x-dW-vFg"/>
-                            <constraint firstAttribute="bottom" secondItem="ZbT-2P-Ek8" secondAttribute="bottom" constant="244" id="SFh-Dg-bpa"/>
                             <constraint firstItem="DBl-TJ-qQD" firstAttribute="top" secondItem="wr9-Bv-sEF" secondAttribute="top" type="default" id="T5C-Hp-Na7"/>
                             <constraint firstItem="D2f-fn-f2q" firstAttribute="centerY" secondItem="rAh-ws-gZL" secondAttribute="centerY" type="default" id="TJ5-fK-VFY"/>
                             <constraint firstItem="VLL-Cx-hPZ" firstAttribute="top" secondItem="MbS-dB-aVc" secondAttribute="top" type="default" id="UPc-db-AJa"/>
@@ -236,6 +234,7 @@
                             <constraint firstItem="ZbT-2P-Ek8" firstAttribute="top" secondItem="PgD-Pk-UUx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fEk-gf-v9t"/>
                             <constraint firstItem="ndz-xv-zvU" firstAttribute="leading" secondItem="Ztn-kE-YZM" secondAttribute="leading" constant="13" id="gBe-w3-bW6"/>
                             <constraint firstItem="D2f-fn-f2q" firstAttribute="leading" secondItem="lHV-d4-GSP" secondAttribute="leading" type="default" id="gpS-k6-yEX"/>
+                            <constraint firstAttribute="bottom" secondItem="ZbT-2P-Ek8" secondAttribute="bottom" constant="195" id="jCX-y7-wB0"/>
                             <constraint firstItem="iEq-Hx-I4i" firstAttribute="leading" secondItem="ijD-eJ-WKv" secondAttribute="leading" type="default" id="jbT-SW-Y03"/>
                             <constraint firstItem="YxR-H7-Dhg" firstAttribute="centerX" secondItem="ZbT-2P-Ek8" secondAttribute="centerX" type="default" id="k50-Aa-tnX"/>
                             <constraint firstItem="wr9-Bv-sEF" firstAttribute="leading" secondItem="Ztn-kE-YZM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kac-oQ-EEf"/>
@@ -344,29 +343,6 @@
     <resources>
         <image name="setting.png" width="72" height="72"/>
     </resources>
-    <classes>
-        <class className="IndexViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IndexViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="endRiding:"/>
-                <relationship kind="action" name="startRiding:"/>
-                <relationship kind="outlet" name="endBtu" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="endTime" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ico" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="myMapView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="stratTime" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="temperature" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="today" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="weather" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="RecordViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecordViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
